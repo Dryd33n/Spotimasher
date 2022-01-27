@@ -1,0 +1,173 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+:root {
+    --spoti-green:#1ed860;
+    --spoti-purple:#ca00c2;
+}
+
+body{
+    background: rgb(36, 36, 36);
+    font-family: 'Roboto', sans-serif;
+}
+
+.header{
+    margin-top: 20px;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    font-weight: 400;
+}
+
+.headerImg{
+    width: 30vw;
+    height: auto;
+}
+
+
+.auth{
+    display: grid;
+    place-items: center;
+    height: 100%
+}
+
+.authText{
+    margin-top: 2em;
+    color: var(--spoti-green);
+    font-size: 48px;
+    text-align: center;
+}
+
+.button{
+    width: 150px;
+    height: 45px;
+    border-radius: 22.5px;
+    text-transform: uppercase;
+    background-color: var(--spoti-purple);
+    border: none;
+    font-size: 18px;
+    transition: all 0.2s;
+    margin: 0.25em;
+}
+
+.button:hover{
+    background: #9e0299;
+}
+
+
+.main{
+    display: grid;
+    place-items: center;
+}
+
+
+.masher{
+    margin-left: auto;
+    margin-right: auto;
+    display:grid;
+    place-items: center;
+    width: 70vw;
+    grid-gap: 40px;
+}
+
+.playlistTitle{
+    margin-top: 3em;
+    font-size: 32px;
+    color: var(--spoti-green);
+}
+
+.playlistInput{
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+    border-width: 1px;
+    border-color: #CCCCCC;
+    background-color: #FFFFFF;
+    color: #000000;
+    border-style: solid;
+    border-radius: 31px;
+    margin: 30px;
+}
+
+.playlistSettings{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+}
+
+.error{
+    color: red;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.playlistCreatedModel{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.541);
+    position: absolute;
+    display: none;
+    place-items: center;
+}
+
+.playlistCreatedModalBox{
+    width: 50%;
+    height: 30%;
+    background-color: #707070;
+    display: grid;
+    place-items: center;
+}
+
+.exit{
+    color: black;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 0.1em;
+}

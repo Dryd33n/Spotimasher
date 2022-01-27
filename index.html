@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotimasher</title>
+    <link rel="stylesheet" href="./stylesheet.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;1,100;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body onload='onPageLoad()'>
+
+    <script src="app.js"></script>
+
+    <div class='header'>
+        <img class='headerImg' src='./spotimasher_logo.png'></img>
+    </div>
+
+    <div id="auth" class='auth'>
+        <div class="authText">PLEAE AUTHORIZE TO CONTINUE</div>
+
+        <button class='button' onclick="requestAuthorization()">Authorize</button>
+    </div>
+
+    <div id="main">
+
+        <div class="masher">
+            <p class='playlistTitle'
+                style='grid-row-start: 1; grid-row-end: 2; grid-column-start: 1; grid-column-end: 2;'>PLAYLIST 1</p>
+
+            <p class='playlistTitle'
+                style='grid-row-start: 1; grid-row-end: 2; grid-column-start: 2; grid-column-end: 3;'>PLAYLIST 2</p>
+
+            <input type="text" class='playlistInput' id='playlistURL1' placeholder='Valid Spotify Playlist URL'
+                style='grid-row-start: 2; grid-row-end: 3; grid-column-start: 1; grid-column-end: 2;'>
+
+            <p id='playlist1error' style='grid-row-start: 3; grid-row-end: 4; grid-column-start: 1; grid-column-end: 2;'
+                class='error'></p>
+
+            <input type="text" class='playlistInput' id='playlistURL2' placeholder='Valid Spotify Playlist URL'
+                style='grid-row-start: 2; grid-row-end: 3; grid-column-start: 2; grid-column-end: 3;'>
+
+            <p id='playlist2error' style='grid-row-start: 3; grid-row-end: 4; grid-column-start: 2; grid-column-end: 3;'
+                class='error'></p>
+
+            <button onclick="mashPlaylists(playlistURL1.value,playlistURL2.value)" class='button'
+                style='grid-row-start: 4; grid-row-end: 5; grid-column-start: 1; grid-column-end: 3;'>Mash!</button>
+        </div>
+
+        <div class='playlistSettings'>
+            <p class='playlistTitle'>Playlist Settings</p>
+            <p class='playlistTitle' style='font-size: 18px;'>Playlist Name:</p>
+            <input type='playlistTitle' class='playlistInput' style='width: 300px' id="playlistName"
+                placeholder='My Awesome Playlist!'>
+            <p id='playlistNameError' class='error'></p>
+            <p class='playlistTitle' style='font-size: 18px;'>Playlist Desc:</p>
+            <input type='playlistTitle' class='playlistInput' style='width: 300px' id="playlistDesc"
+                placeholder='This is my awesome playlist.'>
+            <p id='playlistDescError' class='error'></p>
+        </div>
+
+        <div class="playlistCreatedModel" id="playlistCreatedModal">
+            <div class="playlistCreatedModalBox">
+                <p class="playlistTitle">Playlist Created!</p>
+                <br>
+                <button type="button" class='button' onclick="openPlaylist()">Open!</button>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
